@@ -15,9 +15,7 @@ module Appboy
           app_group_id:        app_group_id,
           campaign_id:         campaign_id,
           trigger_properties:  campaign_trigger,
-          recipients: {
-            external_user_ids: external_user_ids
-          }
+          recipients: external_user_ids.map{|id| {external_user_id: id}}
         }
       end
     end
